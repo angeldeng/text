@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .c1{
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+<button id="add">添加样式</button>
+<button id="del">移除样式</button>
+<div></div>
+<div></div>
+<div></div>
+</body>
+<script>
+    //属性相关操作
+
+    //获取div
+    var add=document.getElementById("add");
+    var del=document.getElementById("del");
+
+    add.onclick=function(){
+        var divs=document.getElementsByTagName("div");
+        // console.log(divs)
+        for (var i=0;i<divs.length;i++){
+            divs[i].setAttribute("class","c1");
+        }
+    }
+
+    del.onclick=function(){
+        var divs=document.getElementsByTagName("div");
+        // console.log(divs)
+        for (var i=0;i<divs.length;i++){
+            divs[i].removeAttribute("class","c1");
+        }
+    }
+
+
+</script>
+</html>
